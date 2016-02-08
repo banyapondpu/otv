@@ -1,0 +1,42 @@
+<div ng-controller="historyController">
+
+<ion-content>
+<a href="#/main/{{showID}}">
+<div class="header_profile">
+	<div align="left" >
+		<div class="close">X</div>
+		<div class="l_col">
+		<img src="img/profile_history.png" class="profile_history" />
+		</div>
+
+		<div class="r_col"> 
+			<h3 class="xt">ยินดีต้อนรับ</h3>
+			<p class="xs"> {{showName}}</p>
+			<p class="xa">รายการที่รับชมล่าสุด</p>
+		</div>
+	</div>
+</div>
+</a>
+<div class="history">
+	<ion-list>
+      <ion-item >
+       <div class="cateheader" >
+       <i class="icon ion-play"></i>Episode</div>
+       <ion-scroll zooming = "true" direction = "x" class = "ionsclr">
+        <div class="paneview_item">
+            <div  class="square_box" ng-repeat="epi in had_seen">
+                <div id="movie-{{epi.content_id}}">
+                <a href="#/app/playlists/{{epi.content_season_id}}">
+                <img ng-src="{{epi.thumbnail}}" onerror="this.src = 'http://placehold.it/350x150';" class="square"/>
+                </a></div>
+                <div class="title_small">
+                <a href="#/app/playlists/{{epi.content_season_id}}">{{epi.name_th}}</a>
+                </div>
+              </div>
+        </div>
+        </ion-scroll>
+      </ion-item>
+    </ion-list>
+</div>
+</ion-content>
+</div>

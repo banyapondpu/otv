@@ -1,0 +1,38 @@
+<ion-content>
+ <div align="center"><img src="img/profile.png" class="profile" /></div>
+  <form ng-submit="registerUer()">
+<ion-list>
+
+  <ion-radio ng-model="loginData.sex" ng-value="M">ผู้ชาย</ion-radio>
+  <ion-radio ng-model="loginData.sex" ng-value="F">ผู้หญิง</ion-radio>
+
+</ion-list>
+
+<div class="list list-inset">
+<label class="item item-input">
+    <input type="text" placeholder="YYYY-mm-dd" ng-model="loginData.birth_date">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="ชื่อจริง" ng-model="loginData.first_name">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="นามสกุล" ng-model="loginData.last_name">
+  </label>
+   <label class="item item-input">
+    <input type="text" placeholder="ที่อยู่" ng-model="loginData.address">
+  </label>
+   <label class="item item-input">
+    <input type="text" placeholder="โทรศัพท์" ng-model="loginData.telephone">
+  </label>
+   <label class="item item-input">
+    <input type="text" placeholder="อีเมล" ng-model="loginData.email">
+  </label>
+   <label class="item item-input">
+    <input type="password" placeholder="รหัสผ่าน" ng-model="loginData.pwd">
+  </label>
+
+</div>
+ <button class="button button-block button-assertive signin" type="submit">สมัครสมาชิก</button>
+    </form>
+<a class="button button-block button-dark" href="#/login">ยกเลิก</a>
+  </ion-content>

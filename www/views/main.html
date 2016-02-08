@@ -1,0 +1,75 @@
+<div ng-controller="mainController">
+<ion-view>
+<ion-side-menus>
+      <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-dark nav-title-slide-ios7">
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="openMenu()"></button>
+        </ion-nav-buttons>  
+        </ion-nav-bar>
+        <ion-nav-view>
+		<!--Content-->
+		<!--Movie List by Category-->
+		<ion-content>
+		 <!--Cover-->
+		  <ion-scroll zooming = "true" direction = "x" class = "ionsclr">
+					<div class="paneview">
+						  <div ng-repeat="banner in item_banner" class="divleft">
+						   <img ng-cache ng-src="{{banner.img_file}}" onerror="this.src = 'http://placehold.it/350x150';" class="covers"/>
+						  </div>
+					</div>
+		  </ion-scroll>
+		  <!--Cover-->
+		  
+		  <ion-list>
+			  <ion-item ng-repeat="cate in hilight_items">
+			   <div class="cateheader" >
+			   <a href="#/category/{{user_id}}/{{cate.id}}" class="whitecate"><i class="icon ion-play"></i> {{cate.name_th}}</div></a>
+			   <ion-scroll zooming = "true" direction = "x" class = "ionsclr">
+				<div class="paneview_item">
+					<div  class="square_box" ng-repeat="item in hilight_items[$index].contents | limitTo:quantity">
+						<div id="movie-{{item.content_id}}">
+						<a href="#/content/{{user_id}}/{{item.content_season_id}}">
+						<img ng-cache ng-src="{{item.thumbnail}}" onerror="this.src = 'http://placehold.it/350x150';" class="square"/>
+						</a></div>
+						<div class="title_small">
+						<a href="#/content/{{user_id}}/{{item.content_season_id}}">{{item.name_th}}</a>
+						</div>
+					  </div>
+				</div>
+				</ion-scroll>
+			  </ion-item>
+			</ion-list>
+			</ion-content>
+		  <!--Movie List by Category-->
+		<!--Content-->
+		</ion-nav-view>
+      </ion-pane>
+      <ion-side-menu side="left">
+        <ion-header-bar class="bar bar-header bar-dark" >
+          <div class="white hil" ng-bind-html="dataMember">{{dataMember}}</div>
+        </ion-header-bar>
+        <ion-content has-header="true">
+          <div class="list">
+			<a class="item item-icon-left" href="#main/{{user_id}}">
+				<i class="icon ion-home"></i>
+				Home
+			</a>
+			<a class="item item-icon-left" href="#">
+				<i class="icon ion-star"></i>
+				Favourite
+			</a>
+			<a class="item item-icon-left" href="#">
+				<i class="icon ion-ios-circle-filled"></i>
+				Coins
+			</a>
+			<a ng-repeat="sort in categories"  href="#/category/{{user_id}}/{{sort.id}}"
+            <div class="item"  >{{sort.name_th}}</div>
+			</a>
+          </div>
+        </ion-content>
+      </ion-side-menu> 
+    </ion-side-menus>
+</ion-view>
+</div>
+

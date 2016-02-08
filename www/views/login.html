@@ -1,0 +1,25 @@
+<ion-content>
+ <div align="center"><img src="img/logo_big.png" class="extra" /></div>
+    <div align="center"><img src="img/fb.png" class="extra_a" /></div>
+      <div align="center"><img src="img/tab.png" class="extra_a" /></div>
+  <form ng-submit="doLogin()">
+
+		<label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="loginData.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+
+        <div class="mright">
+        <a  class="noline" href="#/forgetpassword">ลืมรหัสผ่าน</a>
+        </div>
+        <div align="center" style="color:#FFF !important;">หรือ</div>
+        <a class="button button-block button-dark" href="#/register"><h1 style="color:#FFF !important; text-decoration:underline;">สมัครสมาชิกใหม่</h1></a>
+   <button class="button button-block button-assertive signin" type="submit" style="margin:0 auto; width:95%;">เข้าสู่ระบบ</button>
+
+    </form>
+    <a class="button button-block button-dark" href="#/main/0">Skip login</a>
+  </ion-content>

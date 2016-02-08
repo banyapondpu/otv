@@ -1,0 +1,38 @@
+.paneview{width: 300vw; height: 120px;}
+.covers{width:100vw; height:120px;}
+.ionsclr{width:100vw; height:135px;}
+.divleft{float:left;}
+.cateheader{height:40px; color:#FFF; padding: 5px 5px 5px 5px;}
+.cateheader a{ color:#FFF; text-decoration:none;}
+
+.square_box{width:100px; height:125px; color:#FFF; float:left; margin-right: 8px; background-color:#191919;}
+.square{width:100px; height:100px; }
+.title_small{color:#fff; font-size:10px;}
+.title_small a{color:#fff; font-size:10px; text-decoration:none;}
+.paneview_item{width: 160vw; height: 120px;}
+
+.banners{width:100%; height:auto;}
+.white{color:#FFF; padding-left: 60px;}
+.hil{height: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;}
+.red{color:#ef473a; padding-left:10px;}
+.xtra_frame{width:100%;}
+.detailwhite{color:#fff !important;}
+.whitecate{color:#fff !important;}
+.bigwhite{color:#fff !important; font-size:20px !important; padding-left: 60px;}
+.backwhite{color:#fff !important; font-size:20px !important;}
+.extra{width: 50%;}
+.extra_a{width:70%;}
+.noline{color:#FFF; text-decoration:none; padding-right: 20px;}
+.mright{padding-top: 5px; text-align:right;}
+
+.header_profile{background-color: #E54126; height:130px;}
+.close{font-size: 25px; text-decoration: none; color: #000; float: right; padding-top: 10px; padding-right: 20px;}
+.xt{padding-top: 10px; padding-left: 10px;}
+.xs{padding-top: 10px; padding-left: 10px; color:#000;}
+.xa{padding-top: 10px; padding-left: 10px; color:#000;}
+.r_col{width:60%; float:right; height: 128px;}
+.l_col{width:30%; float:left; height: 128px;}
+.skipto{text-align:right; color:#000 !important; font-size:22px !important;  margin-top: 0px !important; margin-bottom: 10px !important;}
